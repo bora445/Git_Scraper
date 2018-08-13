@@ -17,9 +17,10 @@ Run mongoDB docker with following parameters:
 
 
 Create user-defined bridge ->run on your host: docker network create mynet
+
 Map your containers to the bridge:
-On selenium docker run: docker network connect mynet seleniumContainer
-On mongoDB  docker run: docker network connect mynet my_mongo
+	On selenium docker run: docker network connect mynet seleniumContainer
+	On mongoDB  docker run: docker network connect mynet my_mongo
 
 To run the scraper:
 Place scraper.py file in your mapped folder
