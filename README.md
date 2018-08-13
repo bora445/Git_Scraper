@@ -12,19 +12,22 @@ Run Selenium Docker with following parameters:
 	Install following packages with pip install: pymongo, requests
 
 Run mongoDB docker with following parameters:
+
 	docker run -d --name my_mongo mongo
 	run mongoDB on mongo console with command: mongo
 
 
-Create user-defined bridge ->run on your host: docker network create mynet
+Create user-defined bridge ->run on your host: 
 
-	Map your containers to the bridge:
+	docker network create mynet
 
-		On selenium docker run: docker network connect mynet seleniumContainer
-	
-		On mongoDB  docker run: docker network connect mynet my_mongo
+Map your containers to the bridge:
+
+	On selenium docker run: docker network connect mynet seleniumContainer
+	On mongoDB  docker run: docker network connect mynet my_mongo
 
 To run the scraper:
+
 	Place scraper.py file in your mapped folder
 	
 	Run from selenium console: python /usr/share/Selenium/data/scraper.py
