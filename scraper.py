@@ -60,7 +60,7 @@ class MyTest(unittest.TestCase):
             res = 0   ###Results counter
 
             for i in range(num_of_pages):
-                for x in range(1, 11):
+                for x in range(1, 4):
 
                     # Link and Title search
                     result = self.driver.find_element_by_xpath('//*[@id="js-pjax-container"]/div/div[3]/div/ul/div[%s]/div[1]/h3/a'%x)
